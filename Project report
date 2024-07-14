@@ -1,0 +1,64 @@
+Project Report: Predicting Clinical Trial Site Success Rates
+Introduction
+This project aims to predict the success rate of clinical trial sites using various regression models. The dataset clinical_trial_sites.csv contains features related to clinical trial sites and their respective success rates. By applying advanced machine learning techniques, we aim to develop a robust model to accurately predict these success rates.
+
+Dataset Description
+The dataset clinical_trial_sites.csv includes the following columns:
+
+site_id: Unique identifier for each clinical trial site (excluded from features).
+trial_success_rate: The target variable representing the success rate of clinical trials at the site.
+Various numeric and categorical features representing site characteristics.
+Data Preprocessing
+The data preprocessing steps involve:
+
+Separating Features and Target: The site_id and trial_success_rate columns are excluded from features (X), with trial_success_rate being the target (y).
+Splitting Data: The dataset is split into training (80%) and testing (20%) sets.
+Identifying Feature Types:
+Numeric Features: Columns with integer or float data types.
+Categorical Features: Columns with object data types.
+Defining Transformers:
+Numeric Transformer: Imputation with median values and scaling.
+Categorical Transformer: Imputation with the most frequent value and one-hot encoding.
+Combining Transformers: Using ColumnTransformer to apply appropriate transformations to numeric and categorical features.
+Model Selection and Tuning
+Six regression models were considered for bagging and boosting techniques:
+
+RandomForestRegressor
+GradientBoostingRegressor
+AdaBoostRegressor
+BaggingRegressor (using LinearRegression as the base estimator)
+XGBRegressor
+LGBMRegressor
+Each model was incorporated into a pipeline with the preprocessor and tuned using RandomizedSearchCV with predefined parameter grids.
+
+Training and Evaluation
+Training: Each model was trained on the training set using RandomizedSearchCV to find the best hyperparameters.
+Evaluation: The models were evaluated on the testing set using Root Mean Squared Error (RMSE) as the performance metric.
+Results
+The RMSE for each model is as follows:
+
+python
+Copy code
+RandomForest RMSE: <RMSE_Value>
+GradientBoosting RMSE: <RMSE_Value>
+AdaBoost RMSE: <RMSE_Value>
+Bagging RMSE: <RMSE_Value>
+XGBoost RMSE: <RMSE_Value>
+LightGBM RMSE: <RMSE_Value>
+Best Model
+The model with the lowest RMSE on the test set was identified as the best model. The best model was saved using joblib for future use.
+
+python
+Copy code
+Best model saved as 'best_model.pkl'
+Conclusion
+This project successfully applied machine learning techniques to predict clinical trial site success rates. The model development process involved data preprocessing, model selection, hyperparameter tuning, and evaluation. The best-performing model, based on RMSE, was saved for future predictions.
+
+Future Work
+Future improvements may include:
+
+Exploring additional features or external datasets.
+Applying advanced feature engineering techniques.
+Utilizing deep learning models for potentially better performance.
+Continuously monitoring and updating the model to maintain accuracy.
+This project demonstrates a comprehensive approach to building predictive models for clinical trial success rates, providing valuable insights and a foundation for further advancements in this area.
