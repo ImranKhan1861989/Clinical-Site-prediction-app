@@ -1,6 +1,8 @@
 Project Report: Predicting Clinical Trial Site Success Rates
 Introduction
-This project aims to predict the success rate of clinical trial sites using various regression models. The dataset clinical_trial_sites.csv contains features related to clinical trial sites and their respective success rates. By applying advanced machine learning techniques, we aim to develop a robust model to accurately predict these success rates.
+This project aims to predict the success rate of clinical trial sites using various regression models. 
+The dataset clinical_trial_sites.csv contains features related to clinical trial sites and their respective success rates. 
+By applying advanced machine learning techniques, we aim to develop a robust model to accurately predict these success rates.
 
 Dataset Description
 The dataset clinical_trial_sites.csv includes the following columns:
@@ -52,7 +54,9 @@ python
 Copy code
 Best model saved as 'best_model.pkl'
 Conclusion
-This project successfully applied machine learning techniques to predict clinical trial site success rates. The model development process involved data preprocessing, model selection, hyperparameter tuning, and evaluation. The best-performing model, based on RMSE, was saved for future predictions.
+This project successfully applied machine learning techniques to predict clinical trial site success rates. 
+The model development process involved data preprocessing, model selection, hyperparameter tuning, and evaluation. 
+The best-performing model, based on RMSE, was saved for future predictions.
 
 Future Work
 Future improvements may include:
